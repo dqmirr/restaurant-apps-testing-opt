@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createFavoriteRestaurantItemTemplate = (restaurant) => `
 <div class="list_item">
 <picture>
-<source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}">
+<source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" data-src="./public/images/placeholder-image.jpg">
 <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}">
 </picture>
             <div class="city">${restaurant.city}</div>
@@ -21,7 +21,7 @@ const createFavoriteRestaurantItemTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
 <div class="list_item">
 <picture>
-              <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}">
+              <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL + 'restaurant.pictureId'}" data-src="./public/images/placeholder-image.jpg">
               <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}">
             </picture>
 <div class="city">${restaurant.city}</div>
@@ -39,8 +39,8 @@ const createRestaurantItemTemplate = (restaurant) => `
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title">${restaurant.name}</h2>
   <picture>
-                      <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}">
-                      <img src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}">
+                      <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" data-src="./public/images/placeholder-image.jpg">
+                      <img data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}">
                     </picture>
   <div class="restaurant__info">
   <h3>Information</h3>
