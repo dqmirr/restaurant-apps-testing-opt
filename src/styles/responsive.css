@@ -75,3 +75,15 @@
 		max-width: 1200px
 	}
 }
+
+@media screen and (max-width: 650px) {
+    .hero {
+        background-image: url(/images/hero-image_2-small.jpg);
+    }
+}
+
+@media screen and (min-width: 651px) {
+    .hero {
+        background-image: url(/images/hero-image_2-large.jpg);
+    }
+}

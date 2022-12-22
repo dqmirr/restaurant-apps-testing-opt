@@ -2,7 +2,10 @@ import CONFIG from '../../globals/config';
 
 const createFavoriteRestaurantItemTemplate = (restaurant) => `
 <div class="list_item">
-            <img class="list_item_thumb" src="${CONFIG.BASE_IMG_URL}/${restaurant.pictureId}" alt="${restaurant.name}" title="${restaurant.name}">
+<picture>
+<source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}">
+<img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}">
+</picture>
             <div class="city">${restaurant.city}</div>
             <div class="list_item_content">
                 <p class="list_item_rating">
