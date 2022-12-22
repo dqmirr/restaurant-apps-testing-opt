@@ -184,14 +184,7 @@ border-radius: 5px;
 overflow: hidden;
 position: relative
 }
-.list_item_favorite {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-  margin-bottom: 5%;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  }
+
 .city {
 position: absolute;
 top: 8px;
